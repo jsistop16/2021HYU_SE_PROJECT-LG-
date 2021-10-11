@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+public class Cloth_info_complete extends AppCompatActivity {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cloth_info_complete);
 
@@ -24,5 +23,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }

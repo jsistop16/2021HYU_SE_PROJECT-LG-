@@ -20,6 +20,10 @@
         <activity android:name=".Subactivity_top"/>
         <activity android:name=".Subactivity_bottom"/>
         <activity android:name=".Color"/>
+        <activity android:name=".Material"/>
+        <activity android:name=".LastDate"/>
+        <activity android:name=".Cloth_info_complete"/>
+        <activity android:name=".Top_Bottom"/>
     </application>
 
 </manifest>

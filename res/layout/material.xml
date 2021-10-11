@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e9ecef">
+    //소재버튼 총 13개 일단은 3개만 적용
+    //4*3행렬로 배열할 예정
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/material1"
+            android:text="면"
+            android:layout_weight="1"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/material2"
+            android:text="린넨"
+            android:layout_weight="1"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/material3"
+            android:text="실크"
+            android:layout_weight="1"
+            android:layout_margin="5dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
