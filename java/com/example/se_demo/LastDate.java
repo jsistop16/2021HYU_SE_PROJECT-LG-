@@ -4,11 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.Calendar;
 
 
@@ -16,7 +22,7 @@ public class LastDate extends AppCompatActivity {
 
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
-
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -29,13 +35,49 @@ public class LastDate extends AppCompatActivity {
         complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Cloth_info_complete.class);
+                Intent intent = new Intent(getApplicationContext(), WindSystem.class);
                 startActivity(intent);
             }
         });
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
         dateButton.setText(getTodaysDate());
+
+        complete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showMessage();
+            }
+        });
+
+    }
+
+    public void showMessage(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("옷 정보 저장");
+        builder.setMessage("옷 정보를 저장하시겠습니까?");
+        builder.setIcon(android.R.drawable.ic_dialog_alert);
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast toast = Toast.makeText(getApplicationContext(), "다시 설정해주세요", Toast.LENGTH_LONG);
+                toast.show();
+                Intent intent = new Intent(getApplicationContext(), WindSystem.class);
+                startActivity(intent);
+            }
+        });
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast toast = Toast.makeText(getApplicationContext(), "옷 정보가 저장되었습니다", Toast.LENGTH_LONG);
+                toast.show();
+                Intent intent = new Intent(getApplicationContext(), WindSystem.class);
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     private String getTodaysDate()
