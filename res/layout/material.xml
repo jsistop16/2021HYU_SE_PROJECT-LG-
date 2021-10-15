@@ -4,37 +4,129 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#e9ecef">
-    //소재버튼 총 13개 일단은 3개만 적용
     //4*3행렬로 배열할 예정
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Button
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material1"
+                android:text="면"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material2"
+                android:text="폴리"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material3"
+                android:text="레이온"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material4"
+                android:text="기모"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material5"
+                android:text="아크릴"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material6"
+                android:text="울"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material7"
+                android:text="캐시미어"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material8"
+                android:text="나일론"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material9"
+                android:text="스웨이드"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/material1"
-            android:text="면"
-            android:layout_weight="1"
-            android:layout_margin="5dp"/>
+            android:orientation="horizontal"
+            android:layout_gravity="center">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/material2"
-            android:text="린넨"
-            android:layout_weight="1"
-            android:layout_margin="5dp"/>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material10"
+                android:text="린넨"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/material3"
-            android:text="실크"
-            android:layout_weight="1"
-            android:layout_margin="5dp"/>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material11"
+                android:text="기타"
+                android:layout_weight="1"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
 
 
     </LinearLayout>
