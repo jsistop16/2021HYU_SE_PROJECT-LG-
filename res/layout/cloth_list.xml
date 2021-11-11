@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!--초기화면에서 옷정보확인 버튼 누른후
+    리스트뷰 화면 구성 예정-->
+
+</LinearLayout>

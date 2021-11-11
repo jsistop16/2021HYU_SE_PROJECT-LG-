@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="검색하기"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Long"
+            android:background="@drawable/button_gradient"
+            android:textAllCaps="false"
+            android:layout_marginRight="30dp"
+            android:id="@+id/search_long"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Short"
+            android:background="@drawable/button_gradient"
+            android:textAllCaps="false"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/search_short"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#ced4da"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top"
+            android:textAllCaps="false"
+            android:background="@drawable/button_gradient"
+            android:layout_marginRight="30dp"
+            android:id="@+id/search_top"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom"
+            android:textAllCaps="false"
+            android:background="@drawable/button_gradient"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/search_bottom"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#ced4da"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ellipse_red"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ellipse_red" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ellipse_orange"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/ellipse_orange" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ellipse_yellow"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/ellipse_yellow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ellipse_green"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ellipse_green" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ellipse_blue"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/ellipse_blue" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ellipse_indigo"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/ellipse_indigo" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ellipse_purple"
+                android:layout_width="52dp"
+                android:layout_height="42dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/ellipse_purple" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#ced4da"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search1"
+                android:text="면"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search2"
+                android:text="폴리"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search3"
+                android:text="레이온"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search4"
+                android:text="기모"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search5"
+                android:text="아크릴"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search6"
+                android:text="울"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search7"
+                android:text="캐시미어"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search8"
+                android:text="나일론"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search9"
+                android:text="스웨이드"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search10"
+                android:text="린넨"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/material_search11"
+                android:text="기타"
+                android:background="@drawable/material_search_background"
+                android:stateListAnimator="@null"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

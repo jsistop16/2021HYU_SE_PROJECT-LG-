@@ -1,116 +1,214 @@
 package com.example.se_demo;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.ServerError;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.HttpHeaderParser;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.w3c.dom.Text;
+
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
+import static android.content.ContentValues.TAG;
+
 public class Material extends AppCompatActivity {
+
+    JSONObject jsonData;
+
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.material);
 
-        Button material1 = (Button) findViewById(R.id.material1);
-        Button material2 = (Button) findViewById(R.id.material2);
-        Button material3 = (Button) findViewById(R.id.material3);
-        Button material4 = (Button) findViewById(R.id.material4);
-        Button material5 = (Button) findViewById(R.id.material5);
-        Button material6 = (Button) findViewById(R.id.material6);
-        Button material7 = (Button) findViewById(R.id.material7);
-        Button material8 = (Button) findViewById(R.id.material8);
-        Button material9 = (Button) findViewById(R.id.material9);
-        Button material10 = (Button) findViewById(R.id.material10);
-        Button material11 = (Button) findViewById(R.id.material11);
+        Button cotton = (Button) findViewById(R.id.material1);
+        Button poly = (Button) findViewById(R.id.material2);
+        Button rayon = (Button) findViewById(R.id.material3);
+        Button kimo = (Button) findViewById(R.id.material4);
+        Button acrylic = (Button) findViewById(R.id.material5);
+        Button wool = (Button) findViewById(R.id.material6);
+        Button cashmere = (Button) findViewById(R.id.material7);
+        Button nylon = (Button) findViewById(R.id.material8);
+        Button suede = (Button) findViewById(R.id.material9);
+        Button linen = (Button) findViewById(R.id.material10);
+        Button etc = (Button) findViewById(R.id.material11);
 
-        material1.setOnClickListener(new View.OnClickListener() {
+        Intent intent = getIntent();
+
+        try{
+            jsonData = new JSONObject(intent.getStringExtra("jsonData"));
+        }catch(JSONException e){
+            e.printStackTrace();
+        }
+
+        cotton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "cotton");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material2.setOnClickListener(new View.OnClickListener() {
+        poly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "poly");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material3.setOnClickListener(new View.OnClickListener() {
+        rayon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "rayon");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material4.setOnClickListener(new View.OnClickListener() {
+        kimo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "kimo");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material5.setOnClickListener(new View.OnClickListener() {
+        acrylic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "acrylic");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material6.setOnClickListener(new View.OnClickListener() {
+        wool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "wool");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material7.setOnClickListener(new View.OnClickListener() {
+        cashmere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "cashmere");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material8.setOnClickListener(new View.OnClickListener() {
+        nylon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "nylon");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material9.setOnClickListener(new View.OnClickListener() {
+        suede.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "suede");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material10.setOnClickListener(new View.OnClickListener() {
+        linen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "linen");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
 
-        material11.setOnClickListener(new View.OnClickListener() {
+        etc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LastDate.class);
+                Intent intent = new Intent(getApplicationContext(), Photo.class);
+                try {
+                    jsonData.put("material", "etc");
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+                intent.putExtra("jsonData", jsonData.toString());
                 startActivity(intent);
             }
         });
