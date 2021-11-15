@@ -21,7 +21,7 @@ public class WindSystem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                Toast toast = Toast.makeText(getApplicationContext(), "송풍시스템이 예약되었습니다", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "환기시스템이 예약되었습니다", Toast.LENGTH_LONG);
                 toast.show();
                 startActivity(intent);
 
@@ -31,8 +31,8 @@ public class WindSystem extends AppCompatActivity {
         windno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                Toast toast = Toast.makeText(getApplicationContext(), "송풍시스템을 예약하지 않으셨습니다", Toast.LENGTH_LONG);
+                Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
+                Toast toast = Toast.makeText(getApplicationContext(), "환기시스템을 예약하지 않으셨습니다", Toast.LENGTH_LONG);
                 toast.show();
                 startActivity(intent);
             }

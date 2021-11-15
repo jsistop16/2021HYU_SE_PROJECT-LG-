@@ -3,10 +3,12 @@ package com.example.se_demo;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.telecom.Call;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -30,15 +32,20 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+
 
 import static android.content.ContentValues.TAG;
 
 public class Photo extends AppCompatActivity {
 
-    String postUrl = "http://54.180.125.238/cloth";
+    String postUrl = "http://3.37.62.214/cloth";
     JSONObject jsonData;
     TextView txt;
+
+
 
     private final int GET_GALLERY_IMAGE = 200;//사진
     private ImageView imageView;//사진
@@ -114,12 +121,14 @@ public class Photo extends AppCompatActivity {
                                 }
                             }
                         });
-                Intent intent = new Intent(getApplicationContext(), WindSystem.class);
+                Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
                 startActivity(intent);
 
                 jsonObjectRequest.setShouldCache(false);
                 sendHelper.requestQueue = Volley.newRequestQueue(getApplicationContext());
                 sendHelper.requestQueue.add(jsonObjectRequest);
+                //**************************************************************//
+                //Cursor c = getContentResolver().query(Uri.parse());
             }
         });
 
@@ -134,7 +143,11 @@ public class Photo extends AppCompatActivity {
             Uri selectedImageUri = data.getData();
             imageView.setImageURI(selectedImageUri);
         }
+
+
     }
     //사진
+
+
 
 }

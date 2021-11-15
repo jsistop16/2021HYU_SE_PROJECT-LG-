@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="송풍시스템 예약"
+        android:text="환기시스템 실행"
         android:textStyle="bold"
         android:textSize="20dp"
         android:textAlignment="center"
@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="송풍시스템을 예약하시겠습니까?"
+        android:text="환기시스템을 실행하시겠습니까?"
         android:textStyle="italic"
         android:textSize="15dp"
         android:textAlignment="center"/>
