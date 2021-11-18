@@ -8,7 +8,7 @@ import android.content.Intent;
         import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
+    //하단바 첫번쨰 버튼 눌렀을때 화면
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

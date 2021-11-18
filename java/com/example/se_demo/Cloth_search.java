@@ -11,5 +11,6 @@ public class Cloth_search extends AppCompatActivity {
         setContentView(R.layout.cloth_search);
 
 
+
     }
 }

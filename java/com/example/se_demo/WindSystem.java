@@ -20,7 +20,7 @@ public class WindSystem extends AppCompatActivity {
         windyes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
                 Toast toast = Toast.makeText(getApplicationContext(), "환기시스템이 예약되었습니다", Toast.LENGTH_LONG);
                 toast.show();
                 startActivity(intent);

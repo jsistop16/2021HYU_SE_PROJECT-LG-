@@ -12,7 +12,9 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class InitialScreen extends AppCompatActivity {
-
+    //(인트로3초 넘어가고)앱 처음 화면
+    //하단바까지 포함된 전체 화면
+    //하단바 위에 표현되는 화면은 각각 하나씩 Fragment프레임으로 구성
     private FragmentManager fragmentManager = getSupportFragmentManager();
     private FragmentHanger fragmentHanger = new FragmentHanger();
     private FragmentDrawer fragmentDrawer = new FragmentDrawer();
