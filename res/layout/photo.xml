@@ -21,9 +21,5 @@
         android:backgroundTint="#ffd43b"
         android:textColor="@color/black" />
 
-    <TextView
-        android:id="@+id/txt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>

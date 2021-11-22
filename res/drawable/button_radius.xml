@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:state_pressed="false">
-        <shape xmlns:android="http://schemas.android.com/apk/res/android">
-            <solid android:color="#ffffff"/>
-            <stroke
-                android:width="1dp"
-                android:color="#111" />
-            <corners
-                android:radius="20dp" />
-        </shape>
-    </item>
-
-    <item android:state_pressed="true"
-        android:drawable="@drawable/check"/>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#ffffff"/>
+        <stroke
+            android:width="1dp"
+            android:color="#111" />
+        <corners
+            android:radius="20dp" />
+    </shape>
 
 </selector>

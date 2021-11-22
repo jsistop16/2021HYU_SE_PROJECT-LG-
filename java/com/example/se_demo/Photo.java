@@ -15,10 +15,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -27,16 +25,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Text;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-
-
 import static android.content.ContentValues.TAG;
 
 public class Photo extends AppCompatActivity {
@@ -70,7 +64,7 @@ public class Photo extends AppCompatActivity {
         }
 
         Button btn_complete = (Button)findViewById(R.id.finalbutton);
-        txt = (TextView)findViewById(R.id.txt);
+
         btn_complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
