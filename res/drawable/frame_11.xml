@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--서랍장 버튼 디자인-->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="66dp"
+    android:height="16dp"
+    android:viewportWidth="66"
+    android:viewportHeight="26">
+
+    <group>
+
+        <clip-path
+            android:pathData="M10 0H56C61.5228 0 66 4.47715 66 10V16C66 21.5228 61.5228 26 56 26H10C4.47715 26 0 21.5228 0 16V10C0 4.47715 4.47715 0 10 0Z"
+            />
+
+        <path
+            android:pathData="M0 0V26H66V0"
+            android:fillColor="#C4C4C4"
+            />
+
+    </group>
+
+</vector>

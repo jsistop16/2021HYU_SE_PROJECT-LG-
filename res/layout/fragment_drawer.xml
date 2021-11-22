@@ -1,40 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E5E5E5"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/aller_bd"
+        android:layout_marginTop="10dp"
+        android:textSize="50dp"
+        android:text="@string/drawer"
+        android:textAppearance="@style/drawer"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="1번서랍"
+            android:layout_height="wrap_content"
+            android:text="1번 서랍"
+            android:fontFamily="@font/regular"
             android:textAlignment="center"
             android:textSize="30dp"
-            android:paddingTop="10dp"
             android:layout_weight="2"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
+            android:background="@drawable/frame_11"
             android:id="@+id/drawer1_temp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
+            android:background="@drawable/frame_11"
             android:id="@+id/drawer1_hum"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
@@ -43,33 +59,39 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="2번서랍"
+            android:text="2번 서랍"
+            android:fontFamily="@font/regular"
             android:textAlignment="center"
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
+            android:background="@drawable/frame_11"
             android:id="@+id/drawer2_temp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
+            android:background="@drawable/frame_11"
             android:id="@+id/drawer2_hum"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
@@ -78,34 +100,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="3번서랍"
+            android:text="3번 서랍"
+            android:fontFamily="@font/regular"
             android:textAlignment="center"
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
             android:id="@+id/drawer3_temp"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
             android:id="@+id/drawer3_hum"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -113,34 +141,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="4번서랍"
+            android:text="4번 서랍"
+            android:fontFamily="@font/regular"
             android:textAlignment="center"
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
             android:id="@+id/drawer4_temp"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
             android:id="@+id/drawer4_hum"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -148,34 +182,40 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="5번서랍"
+            android:text="5번 서랍"
+            android:fontFamily="@font/regular"
             android:textAlignment="center"
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
             android:id="@+id/drawer5_temp"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
             android:id="@+id/drawer5_hum"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -183,34 +223,39 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="@drawable/rectangle"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="6번서랍"
+            android:text="6번 서랍"
+            android:fontFamily="@font/regular"
             android:textAlignment="center"
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
             android:id="@+id/drawer6_temp"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
             android:id="@+id/drawer6_hum"
+            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 

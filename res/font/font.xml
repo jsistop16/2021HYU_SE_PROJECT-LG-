@@ -4,4 +4,13 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/praise"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/aller_bd"/>
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/aller_bd"/>
 </font-family>
