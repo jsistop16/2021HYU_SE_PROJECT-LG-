@@ -4,139 +4,216 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#e9ecef">
-    //4*3행렬로 배열할 예정
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material1"
-                android:text="면"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material2"
-                android:text="폴리"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material3"
-                android:text="레이온"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material4"
-                android:text="기모"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material5"
-                android:text="아크릴"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material6"
-                android:text="울"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material7"
-                android:text="캐시미어"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material8"
-                android:text="나일론"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-            <Button
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material9"
-                android:text="스웨이드"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material10"
-                android:text="린넨"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-            <Button
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/material11"
-                android:text="기타"
-                android:layout_weight="1"
-                android:layout_margin="5dp"/>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
         android:gravity="center">
 
+        <TextView
+            style="@style/calender"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/jua"
+            android:text="AddingCloth"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/cancel_btn5"
+            android:src="@drawable/cancel_btn"/>
+
     </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/kimo"
+                    android:layout_marginBottom="3dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/nylon"
+                    android:layout_marginBottom="3dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/denim" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/linen"
+                    android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/cotton"
+                    android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/suede"
+                    android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/acryl"
+                    android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/wool"
+                    android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/cashmere"
+                    android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/poly"
+                    android:layout_marginBottom="3dp"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/etc"
+                    android:layout_marginBottom="3dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/kimo"
+                        android:text="기모"/>
+
+                    <RadioButton
+                        android:id="@+id/nylon"
+                        android:layout_width="80dp"
+                        android:layout_height="25dp"
+                        android:text="나일론" />
+
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/denim"
+                        android:text="데님"/>
+
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/linen"
+                        android:layout_marginLeft="5dp"
+                        android:text="린넨"/>
+
+                    <RadioButton
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/cotton"
+                        android:layout_marginLeft="5dp"
+                        android:text="면"/>
+
+                    <RadioButton
+                        android:layout_width="85dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/suede"
+                        android:layout_marginLeft="15dp"
+                        android:text="스웨이드"/>
+
+                    <RadioButton
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/acryl"
+                        android:text="아크릴"/>
+
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/wool"
+                        android:text="울"/>
+
+                    <RadioButton
+                        android:layout_width="85dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/cashmere"
+                        android:text="캐시미어"/>
+
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/poly"
+                        android:text="폴리"/>
+                    <RadioButton
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/etc"
+                        android:text="기타"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 </LinearLayout>

@@ -7,15 +7,25 @@
     android:background="#E5E5E5"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/aller_bd"
-        android:layout_marginTop="10dp"
-        android:textSize="50dp"
-        android:text="@string/drawer"
-        android:textAppearance="@style/drawer"/>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            style="@style/calender"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jua"
+            android:text="Drawer"
+            android:textSize="40dp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,14 +43,18 @@
             android:textAlignment="center"
             android:textSize="30dp"
             android:layout_weight="2"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            android:id="@+id/drawer1"
+            style="@style/calender"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
-            android:background="@drawable/frame_11"
+            android:background="@drawable/drawer_btn"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
             android:id="@+id/drawer1_temp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
@@ -50,7 +64,9 @@
             android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
-            android:background="@drawable/frame_11"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:background="@drawable/drawer_btn"
             android:id="@+id/drawer1_hum"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
@@ -74,14 +90,17 @@
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            style="@style/calender"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="온도"
             android:textSize="20dp"
-            android:background="@drawable/frame_11"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:background="@drawable/drawer_btn"
             android:id="@+id/drawer2_temp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
@@ -91,7 +110,9 @@
             android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
-            android:background="@drawable/frame_11"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:background="@drawable/drawer_btn"
             android:id="@+id/drawer2_hum"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
@@ -115,7 +136,8 @@
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            style="@style/calender"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
@@ -123,7 +145,9 @@
             android:text="온도"
             android:textSize="20dp"
             android:id="@+id/drawer3_temp"
-            android:background="@drawable/frame_11"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:background="@drawable/drawer_btn"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -133,7 +157,9 @@
             android:text="습도"
             android:textSize="20dp"
             android:id="@+id/drawer3_hum"
-            android:background="@drawable/frame_11"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:background="@drawable/drawer_btn"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -156,25 +182,30 @@
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            style="@style/calender"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/drawer4_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="온도"
-            android:textSize="20dp"
-            android:id="@+id/drawer4_temp"
-            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            android:background="@drawable/drawer_btn"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:text="온도"
+            android:textSize="20dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="습도"
             android:textSize="20dp"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
             android:id="@+id/drawer4_hum"
-            android:background="@drawable/frame_11"
+            android:background="@drawable/drawer_btn"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -197,17 +228,20 @@
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            style="@style/calender"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/drawer5_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="온도"
-            android:textSize="20dp"
-            android:id="@+id/drawer5_temp"
-            android:background="@drawable/frame_11"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            android:background="@drawable/drawer_btn"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:text="온도"
+            android:textSize="20dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
@@ -215,7 +249,9 @@
             android:text="습도"
             android:textSize="20dp"
             android:id="@+id/drawer5_hum"
-            android:background="@drawable/frame_11"
+            android:background="@drawable/drawer_btn"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -237,7 +273,8 @@
             android:textSize="30dp"
             android:paddingTop="10dp"
             android:layout_weight="2"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            style="@style/calender"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
@@ -245,7 +282,9 @@
             android:text="온도"
             android:textSize="20dp"
             android:id="@+id/drawer6_temp"
-            android:background="@drawable/frame_11"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:background="@drawable/drawer_btn"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 
@@ -255,7 +294,9 @@
             android:text="습도"
             android:textSize="20dp"
             android:id="@+id/drawer6_hum"
-            android:background="@drawable/frame_11"
+            android:backgroundTint="#C7B59073"
+            android:fontFamily="@font/jua"
+            android:background="@drawable/drawer_btn"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"/>
 

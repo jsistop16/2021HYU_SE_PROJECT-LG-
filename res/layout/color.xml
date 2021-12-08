@@ -6,93 +6,178 @@
     android:orientation="vertical"
     android:background="#e9ecef">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="색상"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"/>
-
-
-    <RadioGroup
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            style="@style/calender"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="@font/jua"
+            android:text="AddingCloth"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/cancel_btn4"
+            android:src="@drawable/cancel_btn"/>
+
+    </LinearLayout>
 
 
-        <Button
-            android:id="@+id/checkBoxcolor1"
-            android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="@android:color/holo_red_dark"
-            android:layout_marginBottom="3dp"/>
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/checkBoxcolor2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="@android:color/holo_orange_dark"
-            android:layout_marginBottom="3dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/checkBoxcolor3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="#FFD400"
-            android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    app:backgroundTint="#b64d3d"
+                    android:layout_marginBottom="3dp"/>
 
-        <Button
-            android:id="@+id/checkBoxcolor4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="@android:color/holo_green_light"
-            android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="#c9c53c"
+                    android:layout_marginBottom="3dp"/>
 
-        <Button
-            android:id="@+id/checkBoxcolor5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="#0067A3"
-            android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    app:backgroundTint="#3ec241"
+                    android:layout_marginBottom="3dp"/>
 
-        <Button
-            android:id="@+id/checkBoxcolor6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="#808080"
-            android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    app:backgroundTint="#3e42b8"
+                    android:layout_marginBottom="3dp"/>
 
-        <Button
-            android:id="@+id/checkBoxcolor7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="#000000"
-            android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    app:backgroundTint="#3dc2be"
+                    android:layout_marginBottom="3dp"/>
 
-        <Button
-            android:id="@+id/checkBoxcolor8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/circle"
-            app:backgroundTint="#FFFFFF"
-            android:layout_marginBottom="3dp"/>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    app:backgroundTint="#363a3d" />
 
-    </RadioGroup>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    app:backgroundTint="#bfb2b9"
+                    android:layout_marginBottom="3dp"/>
 
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle"
+                    app:backgroundTint="#c934c4"
+                    android:layout_marginBottom="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor1"
+                        android:text="빨강"/>
+
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor2"
+                        android:text="노랑"/>
+
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor3"
+                        android:text="초록"/>
+
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor4"
+                        android:text="파랑"/>
+
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor5"
+                        android:text="민트"/>
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor6"
+                        android:text="검정"/>
+
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor7"
+                        android:text="화이트"/>
+                    <RadioButton
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:id="@+id/checkBoxcolor8"
+                        android:text="보라"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </HorizontalScrollView>
 
 </LinearLayout>

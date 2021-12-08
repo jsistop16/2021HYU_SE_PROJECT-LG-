@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#E5E5E5"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
 
         <TextView
             style="@style/calender"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="80dp"
             android:fontFamily="@font/jua"
-            android:text="Styler"
+            android:text="Ventilation"
             android:textSize="40dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"/>
 
 
     </LinearLayout>
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="50dp"
-        android:id="@+id/styler_spinner"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/gif_id"
+        android:layout_gravity="center"/>
+        //android:background="@drawable/ventilation"
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="285dp"
         android:background="@drawable/rectangle1"
-        android:layout_marginTop="100dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="스타일러 실행"
+            android:text="환기시스템 실행"
             android:fontFamily="@font/jua"
             android:textColor="#fff"
             android:textSize="24sp"
@@ -50,7 +53,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="스타일러를 실행하시겠습니까?"
+            android:text="환기시스템을 실행하시겠습니까?"
             android:textColor="@color/white"
             android:textStyle="italic"
             android:textSize="15dp"
@@ -62,7 +65,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/stylerYes"
+                android:id="@+id/windYes"
                 android:layout_width="90dp"
                 android:layout_height="40dp"
                 android:backgroundTint="#C7B59073"
@@ -74,7 +77,7 @@
             <Button
                 android:layout_width="90dp"
                 android:layout_height="40dp"
-                android:id="@+id/stylerNo"
+                android:id="@+id/windNo"
                 android:backgroundTint="#C7B59073"
                 android:text="아니요"
                 android:fontFamily="@font/jua"

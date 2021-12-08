@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:text="Smart Closet"
+        android:text="Signature Closet"
         android:textColor="#1c7ed6"
         android:textSize="40dp"
         android:fontFamily="@font/praise"
