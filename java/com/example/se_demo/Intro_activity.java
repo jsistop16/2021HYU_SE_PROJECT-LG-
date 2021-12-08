@@ -4,8 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.FileOutputStream;
 
 public class Intro_activity extends AppCompatActivity {
     @Override
@@ -23,6 +24,7 @@ public class Intro_activity extends AppCompatActivity {
             }
         }, 3000); //3초 후 인트로 실행
     }
+
 
     @Override
     protected void onPause() {

@@ -3,16 +3,14 @@ package com.example.se_demo;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.telecom.Call;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
@@ -27,41 +25,65 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
-import java.io.File;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import static android.content.ContentValues.TAG;
 
 public class Photo extends AppCompatActivity {
 
-    String postUrl = "http://3.37.62.214/cloth";
+    String postUrl = "http://13.209.87.94/cloth";
     JSONObject jsonData;
     TextView txt;
-
-
-
-    private final int GET_GALLERY_IMAGE = 200;//사진
-    private ImageView imageView;//사진
-
-
+    TextView jsontxt;
+    Spinner hanger_spinner;
+    String[] items = {"행거1번", "행거2번", "행거3번", "행거4번", "행거5번", "행거6번", "행거7번", "행거8번", "행거9번", "행거10번"};
+    ImageButton cancel_btn6;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo);
-        imageView = (ImageView)findViewById(R.id.cloth_photo);//사진
-        imageView.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,"image/*");
-                startActivityForResult(intent, GET_GALLERY_IMAGE);
+
+        cancel_btn6 = (ImageButton) findViewById(R.id.cancel_btn6);
+
+        cancel_btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
+
+                startActivity(intent);
             }
-        });//사진
+        });
+
+        hanger_spinner = (Spinner) findViewById(R.id.hanger_spinner);
+
         Intent intent = getIntent();
         try{
             jsonData = new JSONObject(intent.getStringExtra("jsonData"));
         }catch(JSONException e){
             e.printStackTrace();
         }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, items
+        );
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        hanger_spinner.setAdapter(adapter);
+
+        hanger_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                //hanger_txt.setText(items[position]);
+                try{
+                    jsonData.put("hangerNo", items[position]);
+                }catch (JSONException e){
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                //hanger_txt.setText("행거번호 선택");
+            }
+        });
 
         Button btn_complete = (Button)findViewById(R.id.finalbutton);
 
@@ -96,7 +118,8 @@ public class Photo extends AppCompatActivity {
                         new Response.Listener<JSONObject>(){
                             @Override
                             public void onResponse(JSONObject response) {
-                                txt.setText(response.toString());
+//                                jsontxt = (TextView)findViewById(R.id.jsontxt);
+//                                jsontxt.setText(response.toString());
                             }
                         },
                         new Response.ErrorListener() {
@@ -117,7 +140,8 @@ public class Photo extends AppCompatActivity {
                         });
                 Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
                 startActivity(intent);
-
+//                jsontxt = findViewById(R.id.jsontxt);
+//                jsontxt.setText(jsonData.toString());
                 jsonObjectRequest.setShouldCache(false);
                 sendHelper.requestQueue = Volley.newRequestQueue(getApplicationContext());
                 sendHelper.requestQueue.add(jsonObjectRequest);
@@ -129,19 +153,4 @@ public class Photo extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
-    //사진
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == GET_GALLERY_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            Uri selectedImageUri = data.getData();
-            imageView.setImageURI(selectedImageUri);
-        }
-
-
-    }
-    //사진
-
-
-
 }

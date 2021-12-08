@@ -6,24 +6,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Subactivity_bottom extends AppCompatActivity {
-    JSONObject jsonData;
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+public class Etc extends AppCompatActivity {
+
+    JSONObject jsonData = new JSONObject();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.subscreen_bottom);
+        setContentView(R.layout.etc);
 
-        Button bottom_long = (Button) findViewById(R.id.checkBoxlong2);
-        Button bottom_short = (Button) findViewById(R.id.checkBoxhalf2);
-        ImageButton cancel_btn3 = (ImageButton) findViewById(R.id.cancel_btn3);
-        Intent intent = getIntent();
+        Button neck = (Button) findViewById(R.id.neck);
+        Button cap = (Button) findViewById(R.id.cap);
+        ImageButton cancel_btn = (ImageButton) findViewById(R.id.cancel_btn);
 
-        cancel_btn3.setOnClickListener(new View.OnClickListener(){
+        cancel_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
@@ -32,20 +31,13 @@ public class Subactivity_bottom extends AppCompatActivity {
             }
         });
 
-        try{
-            jsonData = new JSONObject(intent.getStringExtra("jsonData"));
-            System.out.println(jsonData.toString());
-        }catch (JSONException e){
-            e.printStackTrace();
-        }
 
-
-        bottom_long.setOnClickListener(new View.OnClickListener() {
+        neck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Color.class);
                 try{
-                    jsonData.put("short_long","long");
+                    jsonData.put("etc", "neck");
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
@@ -54,12 +46,14 @@ public class Subactivity_bottom extends AppCompatActivity {
             }
         });
 
-        bottom_short.setOnClickListener(new View.OnClickListener() {
+
+        cap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Color.class);
+
                 try{
-                    jsonData.put("short_long","short");
+                    jsonData.put("etc", "cap");
                 }catch (JSONException e){
                     e.printStackTrace();
                 }
@@ -67,5 +61,8 @@ public class Subactivity_bottom extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
+
 }

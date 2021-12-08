@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,7 +24,18 @@ public class Top_Bottom extends AppCompatActivity {
         Button top_btn = (Button) findViewById(R.id.checkBox1);
         Button bottom_btn = (Button) findViewById(R.id.checkBox2);
         Button etc_btn = (Button) findViewById(R.id.checkBox3);
+        ImageButton cancel_btn1 = (ImageButton) findViewById(R.id.cancel_btn1);
 
+        Intent intent = getIntent();
+
+        cancel_btn1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
+
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -58,7 +70,7 @@ public class Top_Bottom extends AppCompatActivity {
         etc_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Color.class);
+                Intent intent = new Intent(getApplicationContext(), Etc.class);
                 //상,하의가 아닌 기타 옷은 바로 color 클래스로 이동
                 //"short_long" : "null"로 저장
                 try{
@@ -70,10 +82,5 @@ public class Top_Bottom extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
     }
 }

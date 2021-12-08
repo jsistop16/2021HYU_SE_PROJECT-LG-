@@ -1,6 +1,5 @@
 package com.example.se_demo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -19,7 +18,7 @@ public class InitialScreen extends AppCompatActivity {
     private FragmentHanger fragmentHanger = new FragmentHanger();
     private FragmentDrawer fragmentDrawer = new FragmentDrawer();
     private FragmentCalendar fragmentCalendar = new FragmentCalendar();
-    private FragmentSettings fragmentSettings = new FragmentSettings();
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,9 +46,6 @@ public class InitialScreen extends AppCompatActivity {
                     break;
                 case R.id.calendar:
                     transaction.replace(R.id.frameLayout, fragmentCalendar).commitAllowingStateLoss();
-                    break;
-                case R.id.settings:
-                    transaction.replace(R.id.frameLayout, fragmentSettings).commitAllowingStateLoss();
                     break;
             }
             return true;

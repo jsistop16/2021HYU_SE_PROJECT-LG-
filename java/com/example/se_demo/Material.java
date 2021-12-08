@@ -1,35 +1,15 @@
 package com.example.se_demo;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import android.widget.ImageButton;
+import android.widget.RadioButton;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.android.volley.NetworkResponse;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.ServerError;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
-
-import java.io.UnsupportedEncodingException;
-import java.util.Date;
-
-import static android.content.ContentValues.TAG;
 
 public class Material extends AppCompatActivity {
 
@@ -39,17 +19,19 @@ public class Material extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.material);
 
-        Button cotton = (Button) findViewById(R.id.material1);
-        Button poly = (Button) findViewById(R.id.material2);
-        Button rayon = (Button) findViewById(R.id.material3);
-        Button kimo = (Button) findViewById(R.id.material4);
-        Button acrylic = (Button) findViewById(R.id.material5);
-        Button wool = (Button) findViewById(R.id.material6);
-        Button cashmere = (Button) findViewById(R.id.material7);
-        Button nylon = (Button) findViewById(R.id.material8);
-        Button suede = (Button) findViewById(R.id.material9);
-        Button linen = (Button) findViewById(R.id.material10);
-        Button etc = (Button) findViewById(R.id.material11);
+        RadioButton kimo = (RadioButton) findViewById(R.id.kimo);
+        RadioButton nylon = (RadioButton) findViewById(R.id.nylon);
+        RadioButton denim = (RadioButton) findViewById(R.id.denim);
+        RadioButton linen = (RadioButton) findViewById(R.id.linen);
+        RadioButton cotton = (RadioButton) findViewById(R.id.cotton);
+        RadioButton suede = (RadioButton) findViewById(R.id.suede);
+        RadioButton acryl = (RadioButton) findViewById(R.id.acryl);
+        RadioButton wool = (RadioButton) findViewById(R.id.wool);
+        RadioButton cashmere = (RadioButton) findViewById(R.id.cashmere);
+        RadioButton poly = (RadioButton) findViewById(R.id.poly);
+        RadioButton etc = (RadioButton) findViewById(R.id.etc);
+
+        ImageButton cancel_btn5 = (ImageButton) findViewById(R.id.cancel_btn5);
 
         Intent intent = getIntent();
 
@@ -58,6 +40,16 @@ public class Material extends AppCompatActivity {
         }catch(JSONException e){
             e.printStackTrace();
         }
+
+        cancel_btn5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
+
+                startActivity(intent);
+            }
+        });
+
 
         cotton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,12 +79,12 @@ public class Material extends AppCompatActivity {
             }
         });
 
-        rayon.setOnClickListener(new View.OnClickListener() {
+        denim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Photo.class);
                 try {
-                    jsonData.put("material", "rayon");
+                    jsonData.put("material", "denim");
                 }catch(JSONException e){
                     e.printStackTrace();
                 }
@@ -115,12 +107,12 @@ public class Material extends AppCompatActivity {
             }
         });
 
-        acrylic.setOnClickListener(new View.OnClickListener() {
+        acryl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Photo.class);
                 try {
-                    jsonData.put("material", "acrylic");
+                    jsonData.put("material", "acryl");
                 }catch(JSONException e){
                     e.printStackTrace();
                 }

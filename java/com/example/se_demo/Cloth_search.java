@@ -26,7 +26,7 @@ import static android.content.ContentValues.TAG;
 
 public class Cloth_search extends AppCompatActivity {
 
-    String postUrl2 = "http://3.34.2.51/cloth/search";
+    String postUrl2 = "http://13.209.87.94/cloth/search";
     JSONObject jsonData2 = new JSONObject();
     TextView txt2;
 
@@ -125,9 +125,11 @@ public class Cloth_search extends AppCompatActivity {
                             }
                         });
                 jsonObjectRequest.setShouldCache(false);
+                Intent intent = new Intent(getApplicationContext(), InitialScreen.class);
+                startActivity(intent);
                 sendHelper.requestQueue2 = Volley.newRequestQueue(getApplicationContext());
                 sendHelper.requestQueue2.add(jsonObjectRequest);
-                //txt2.setText(jsonData2.toString());
+                txt2.setText(jsonData2.toString());
             }
         });
     }
