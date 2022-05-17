@@ -1,4 +1,4 @@
-### 2021HYU_SE_PROJECT-LG-
+### 2021_SE_PROJECT
 
 # Introduction
 
